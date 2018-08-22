@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'FMedia 6.0 (PC)';
+  title = 'FMedia 7.0';
 }
