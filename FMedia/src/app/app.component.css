@@ -1,0 +1,44 @@
+
+mat-toolbar {
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+mat-toolbar > span {
+  margin-right: 50px;
+}
+
+.mat-toolbar-single-row {
+  height: 56px;
+}
+
+.burger-menu {
+  padding-left: 8px;
+  padding-right: 8px;
+  min-width: 0;
+}
+
+.fill-remaining-space {
+  /*This fills the remaining space, by using flexbox.
+ Every toolbar row uses a flexbox row layout. */
+ flex: 1 1 auto;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 18%;
+}
+.card-picture {
+  width: 23%;
+  margin-bottom: 2%;
+}
+.container {
+  margin-top: 50px;
+  min-height: 100%;
+  width: 100%;
+}
+.search-form {
+  width: 90%;
+}
