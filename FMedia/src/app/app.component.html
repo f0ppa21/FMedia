@@ -2,7 +2,9 @@
 <!-- // TODO: Flytta mat-toolbar till en egen component (lägg i Core?) -->
 
 <mat-toolbar color="primary">
-  <span>{{title}}</span>
+  <span>
+    <img class="top-menu-logo" src="/src/assets/images/menu_black.png" />
+  </span>
 
   <span class="fill-remaining-space" fxHide.gt-xs></span>
   <div fxLayout="row" fxShow="false" fxShow.gt-xs>
@@ -10,7 +12,7 @@
     <button mat-button>Dashboard</button>
   </div>
 
-  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" class="burger-menu" fxHide.gt-xs>
+  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" class="top-menu-burger" fxHide.gt-xs>
     <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>
@@ -25,16 +27,16 @@
 
 <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
   <div fxFlex="20%">
-    <img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">
+    <img mat-card-image class="img-card" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">
   </div>
   <div fxFlex="20%">
-    <img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/LTLE4QGRVQ.jpg">
+    <img mat-card-image class="img-card" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/LTLE4QGRVQ.jpg">
   </div>
   <div fxFlex="20%">
-    <img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/R926LU1YEA.jpg">
+    <img mat-card-image class="img-card" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/R926LU1YEA.jpg">
   </div>
   <div fxFlex="20%">
-    <img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/U9PP3KXXY2.jpg">
+    <img mat-card-image class="img-card" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/U9PP3KXXY2.jpg">
   </div>
 </div>
 
