@@ -1,29 +1,5 @@
 
-<!-- // TODO: Flytta mat-toolbar till en egen component (lägg i Core?) -->
-
-<mat-toolbar color="primary">
-  <span>
-    <img class="top-menu-logo" src="/src/assets/images/menu_black.png" />
-  </span>
-
-  <span class="fill-remaining-space" fxHide.gt-xs></span>
-  <div fxLayout="row" fxShow="false" fxShow.gt-xs>
-    <button mat-button>Products</button>
-    <button mat-button>Dashboard</button>
-  </div>
-
-  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" class="top-menu-burger" fxHide.gt-xs>
-    <mat-icon>menu</mat-icon>
-  </button>
-</mat-toolbar>
-
-<mat-menu x-position="before" #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>dialpad</mat-icon>
-    <span>Products</span>
-  </button>
-  <button mat-menu-item>Dashboard</button>
-</mat-menu>
+<app-toolbar></app-toolbar>
 
 <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
   <div fxFlex="20%">

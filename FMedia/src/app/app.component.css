@@ -1,35 +1,4 @@
 
-mat-toolbar {
-  position: fixed;
-  top: 0; /* Sets the sticky toolbar to be on top */
-  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
-}
-
-mat-toolbar > span {
-  margin-right: 40px;
-}
-
-.mat-toolbar-single-row {
-  height: 56px;
-  padding-left: 8px;
-}
-
-.top-menu-logo {
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.top-menu-burger {
-  padding-left: 8px;
-  padding-right: 8px;
-  min-width: 0;
-}
-
-.fill-remaining-space {
-  /*This fills the remaining space, by using flexbox. Every toolbar row uses a flexbox row layout. */
- flex: 1 1 auto;
-}
-
 /* Ta bort / byt ut allt under denna */
 .img-card {
   width: 100%;
