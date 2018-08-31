@@ -14,7 +14,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   imports: [RouterModule, HttpClientModule, MaterialModule, FlexLayoutModule],
-  exports: [RouterModule, HttpClientModule, MaterialModule, FlexLayoutModule, ToolbarComponent],
+  exports: [RouterModule, HttpClientModule, FlexLayoutModule, ToolbarComponent],
   declarations: [ToolbarComponent]
   // providers: [DataService] // these should be singleton
 })
