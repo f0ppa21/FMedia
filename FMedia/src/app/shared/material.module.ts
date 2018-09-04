@@ -9,13 +9,6 @@ import {
 } from '@angular/material';
 
 @NgModule({
-  imports: [
-    MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule
-  ],
   exports: [
     MatButtonModule,
     MatMenuModule,

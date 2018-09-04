@@ -6,22 +6,21 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { CoreModule } from './core/core.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MoviesComponent } from './movies/movies.component';
+import { SharedModule } from './shared/shared.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    CoreModule                // Singleton objects (services, components that are loaded only once, etc.)
+    CoreModule,                // Singleton objects (services, components that are loaded only once, etc.)
+    SharedModule,              // Shared (multi-instance) objects
+    DashboardModule,           // "Eager load" på denna då den visas direkt på startsidan, "Lazy load" på övriga features
+    AppRoutingModule           // Main routes for application
   ],
   declarations: [
-    AppComponent,
-    DashboardComponent,
-    MoviesComponent
+    AppComponent
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

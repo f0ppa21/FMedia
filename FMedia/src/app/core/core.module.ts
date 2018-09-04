@@ -1,21 +1,13 @@
 
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FlexLayoutModule } from '@angular/flex-layout';
-
 import { EnsureModuleLoadedOnceGuard } from './ensureModuleLoadedOnceGuard';
-import { MaterialModule } from './material.module';
 
-// import { ModalModule } from './modal/modal.module';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ToolbarModule } from './toolbar/toolbar.module';
 
 // import { DataService } from './services/data.service';
 
 @NgModule({
-  imports: [RouterModule, HttpClientModule, MaterialModule, FlexLayoutModule],
-  exports: [RouterModule, HttpClientModule, FlexLayoutModule, ToolbarComponent],
-  declarations: [ToolbarComponent]
+  exports: [ToolbarModule]
   // providers: [DataService] // these should be singleton
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {    // Ensure that CoreModule is only loaded into AppModule
