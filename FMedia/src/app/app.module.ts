@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { CoreModule } from './core/core.module';
-import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
@@ -14,7 +13,6 @@ import { DashboardModule } from './dashboard/dashboard.module';
     BrowserModule,
     BrowserAnimationsModule,
     CoreModule,                // Singleton objects (services, components that are loaded only once, etc.)
-    SharedModule,              // Shared (multi-instance) objects
     DashboardModule,           // "Eager load" på denna då den visas direkt på startsidan, "Lazy load" på övriga features
     AppRoutingModule           // Main routes for application
   ],

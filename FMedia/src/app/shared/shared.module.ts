@@ -6,4 +6,4 @@ import { MaterialModule } from './material.module';
 @NgModule({
   exports: [ MaterialModule, FlexLayoutModule ]
 })
-export class SharedModule {}
+export class SharedModule {}  // Exports Shared (multi-instance) objects
