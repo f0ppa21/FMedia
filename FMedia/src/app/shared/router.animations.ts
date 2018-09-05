@@ -1,32 +1,17 @@
 import { trigger, state, animate, style, transition } from '@angular/animations';
 
-// Post by Gerard Sans: https://medium.com/google-developer-experts/angular-2-animate-router-transitions-6de179e00204#.7h2femijg
-
-// Add <script src="https://rawgit.com/web-animations/web-animations-js/master/web-animations.min.js"></script> into index.html for polyfill
-// Add the following to any component to animate the view
-// import { routerTransition } from './router.animations';
-
-// @Component({
-//   selector: 'home',
-//   template: `<h1>Home</h1>`,
-//   animations: [routerTransition()],
-//   host: {'[@routerTransition]': ''}
-// })
-
 export const slideInDownAnimation =
   trigger('routeAnimation', [
-    state('*',
-      style({
-        opacity: 1,
-        transform: 'translateX(0)'
-      })
-    ),
+
     transition(':enter', [
       style({
         transform: 'translateX(-100%)'
       }),
-      animate('0.5s ease-in', style({transform: 'translateX(0%)'}))
+      animate('0.5s ease-in', style({ transform: 'translateX(0%)' }))
     ]),
+
+    // Fungerar bara om man lägger till @HostBinding('style.position')  position = 'absolute'; i komponenten, men då fungerar istället
+    // inte scrollPositionRestoration: 'enabled' i app-routing. Scrolla längst ner på sidan, byt vy och gör back, återställs inte...
     transition(':leave', [
       style({transform: 'translateY(0%)'}),
       animate('0.5s ease-out', style({
@@ -35,77 +20,3 @@ export const slideInDownAnimation =
       }))
     ])
   ]);
-
-/*
-transition(':enter', [
-      style({transform: 'translateY(-100%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateY(0%)'}))
-    ]),
-    transition(':leave', [
-      style({transform: 'translateY(0%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateY(100%)'}))
-    ])
- */
-
-export function routerTransition() {
-  return slideToBottom();
-}
-
-function slideToRight() {
-  return trigger('routerTransition', [
-    state('void', style({position: 'fixed', width: '40%'}) ),
-    state('*', style({position: 'fixed', width: '0%'}) ),
-    transition(':enter', [
-      style({transform: 'translateX(-40%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateX(0%)'}))
-    ]),
-    transition(':leave', [
-      style({transform: 'translateX(0%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateX(40%)'}))
-    ])
-  ]);
-}
-
-function slideToLeft() {
-  return trigger('routerTransition', [
-    state('void', style({position: 'fixed', width: '40%'}) ),
-    state('*', style({position: 'fixed', width: '0%'}) ),
-    transition(':enter', [
-      style({transform: 'translateX(40%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateX(0%)'}))
-    ]),
-    transition(':leave', [
-      style({transform: 'translateX(0%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateX(-40%)'}))
-    ])
-  ]);
-}
-
-function slideToBottom() {
-  return trigger('routerTransition', [
-
-    transition(':enter', [
-      style({transform: 'translateY(-100%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateY(0%)'}))
-    ]),
-    transition(':leave', [
-      style({transform: 'translateY(0%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateY(100%)'}))
-    ])
-  ]);
-}
-
-function slideToTop() {
-  return trigger('routerTransition', [
-    state('void', style({position: 'fixed', width: '100%', height: '100%'}) ),
-    state('*', style({position: 'fixed', width: '100%', height: '100%'}) ),
-    transition(':enter', [
-      style({transform: 'translateY(100%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateY(0%)'}))
-    ]),
-    transition(':leave', [
-      style({transform: 'translateY(0%)'}),
-      animate('0.5s ease-in-out', style({transform: 'translateY(-100%)'}))
-    ])
-  ]);
-}
