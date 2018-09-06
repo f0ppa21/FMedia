@@ -1,20 +1,36 @@
 
 <mat-toolbar color="primary">
-  <span>
+  <span title="Topplistor">
     <a routerLink="/dashboard"><img class="toolbar-logo" src="/src/assets/images/menu_black.png" /></a>
   </span>
 
-  <span class="toolbar-fill-remaining-space" fxHide.gt-xs></span>
   <div fxLayout="row" fxShow="false" fxShow.gt-xs>
     <a mat-button routerLink="/movies"><mat-icon>movie</mat-icon> FILMER</a>
     <a mat-button routerLink="/series"><mat-icon>tv</mat-icon> TV-SERIER</a>
     <a mat-button routerLink="/games"><mat-icon>games</mat-icon> SPEL</a>
   </div>
 
-  <button mat-button [matMenuTriggerFor]="menu" fxHide="false" class="toolbar-burger" fxHide.gt-xs>
+  <span class="toolbar-fill-remaining-space"></span>
+
+  <button mat-button [matMenuTriggerFor]="menumore" fxShow="false" class="toolbar-more" fxShow.gt-xs>
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <button mat-button [matMenuTriggerFor]="menu" fxHide="false" class="toolbar-more" fxHide.gt-xs>
     <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>
+
 <mat-menu x-position="before" #menu="matMenu">
-  <button mat-menu-item routerLink="/movies"><mat-icon>movie</mat-icon> <span>FILMER</span></button>
+  <a mat-menu-item routerLink="/movies"><mat-icon>movie</mat-icon> <span>Filmer</span></a>
+  <a mat-menu-item routerLink="/series"><mat-icon>tv</mat-icon> <span>TV-serier</span></a>
+  <a mat-menu-item routerLink="/games"><mat-icon>games</mat-icon> <span>Spel</span></a>
+  <mat-divider></mat-divider>
+  <a mat-menu-item routerLink="/dashboard"><mat-icon>star</mat-icon> <span>Topplistor</span></a>
+  <a mat-menu-item onclick="alert('Implementation saknas...')"><mat-icon>info</mat-icon> <span>Om FMedia</span></a>
+</mat-menu>
+
+<mat-menu x-position="before" #menumore="matMenu">
+  <a mat-menu-item routerLink="/dashboard"><mat-icon>star</mat-icon> <span>Topplistor</span></a>
+  <a mat-menu-item onclick="alert('Implementation saknas...')"><mat-icon>info</mat-icon> <span>Om FMedia</span></a>
 </mat-menu>
