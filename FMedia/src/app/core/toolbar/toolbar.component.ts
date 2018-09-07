@@ -5,4 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.css']
 })
-export class ToolbarComponent { }
+export class ToolbarComponent {
+
+  showAboutDialog() {
+
+  }
+}

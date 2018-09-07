@@ -1,4 +1,3 @@
-
 mat-toolbar {
   position: fixed;
   top: 0; /* Sets the sticky toolbar to be on top */
@@ -9,9 +8,14 @@ mat-toolbar > span {
   margin-right: 40px;
 }
 
+.mat-divider {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 .mat-toolbar-single-row {
-  height: 56px;
-  padding-left: 8px;
+  height: 48px;
+  padding-left: 4px;
 }
 
 .toolbar-logo {
@@ -19,12 +23,10 @@ mat-toolbar > span {
   margin-top: 8px;
 }
 
-.toolbar-more {
-  padding-left: 8px;
-  padding-right: 8px;
-  min-width: 0;
+.toolbar-more:hover {
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
 .toolbar-fill-remaining-space {
-  flex: 1 1 auto;  /*This fills the remaining space, by using flexbox */
+  flex: 1 1 auto; /*This fills the remaining space, by using flexbox */
 }
