@@ -27,10 +27,10 @@
   <a mat-menu-item routerLink="/games"><mat-icon>games</mat-icon> <span>Spel</span></a>
   <mat-divider></mat-divider>
   <a mat-menu-item routerLink="/dashboard"><mat-icon>star</mat-icon> <span>Topplistor</span></a>
-  <a mat-menu-item onclick="alert('Implementation saknas...')"><mat-icon>info</mat-icon> <span>Om FMedia</span></a>
+  <a mat-menu-item (click)="openAboutDialog()"><mat-icon>info</mat-icon> <span>Om FMedia</span></a>
 </mat-menu>
 
 <mat-menu x-position="before" #menumore="matMenu">
   <a mat-menu-item routerLink="/dashboard"><mat-icon>star</mat-icon> <span>Topplistor</span></a>
-  <a mat-menu-item onclick="alert('Implementation saknas...')"><mat-icon>info</mat-icon> <span>Om FMedia</span></a>
+  <a mat-menu-item (click)="openAboutDialog()"><mat-icon>info</mat-icon> <span>Om FMedia</span></a>
 </mat-menu>
