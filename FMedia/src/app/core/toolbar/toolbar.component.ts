@@ -14,7 +14,7 @@ export class ToolbarComponent {
 
   openAboutDialog() {
     const dialogRef = this.aboutDialog.open(AboutDialogComponent, {
-      width: '400px',
+      width: '320px',
       position: {top: '200px'}
     });
   }

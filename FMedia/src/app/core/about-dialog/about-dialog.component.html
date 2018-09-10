@@ -1,9 +1,20 @@
 
-<h1 mat-dialog-title>Om FMedia</h1>
+<h1 mat-dialog-title>
+    <img class="toolbar-logo" src="/src/assets/images/menu_red.png" />
+</h1>
 <div mat-dialog-content>
-  <p>Content goes here...</p>
+    <mat-list role="list">
+        <mat-list-item>
+          Version <mat-chip-list><mat-chip class="app-version" color="primary" selected>0.1</mat-chip></mat-chip-list>
+        </mat-list-item>
+        <mat-list-item>
+          <h4 mat-line><a href="https://github.com/f0ppa21">f0ppa21</a></h4>
+          <p mat-line>Copyright © FDev 2018</p>
+        </mat-list-item>
+    </mat-list>
+    <mat-divider></mat-divider>
 </div>
-<div mat-dialog-actions>
+<div mat-dialog-actions align="end">
   <button mat-button mat-dialog-close cdkFocusInitial>Stäng</button>
 </div>
 
