@@ -1,11 +1,8 @@
 
-/* Ta bort / byt ut allt under denna */
-.img-card {
-  width: 100%;
-  margin-bottom: 10%;
+.dashboard-card {
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
-.container {
-  min-height: 100%;
-  width: 100%;
-}
