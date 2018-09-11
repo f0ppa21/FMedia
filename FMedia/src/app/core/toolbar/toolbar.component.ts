@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
-import { AboutDialogComponent } from '../about-dialog/about-dialog.component';
+import { AboutDialogComponent, AboutDialogDefaultConfig } from '../about-dialog/about-dialog.component';
 
 @Component({
   selector: 'app-toolbar',
@@ -10,12 +10,9 @@ import { AboutDialogComponent } from '../about-dialog/about-dialog.component';
 })
 export class ToolbarComponent {
 
-  constructor(public aboutDialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {}
 
   openAboutDialog() {
-    const dialogRef = this.aboutDialog.open(AboutDialogComponent, {
-      width: '320px',
-      position: {top: '200px'}
-    });
+    this.dialog.open(AboutDialogComponent, AboutDialogDefaultConfig);
   }
 }

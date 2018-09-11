@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+export const AboutDialogDefaultConfig = {
+  width: '320px',
+  position: {top: '200px'}
+};
+
 @Component({
   templateUrl: './about-dialog.component.html',
   styleUrls: ['./about-dialog.component.css']
