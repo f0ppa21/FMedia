@@ -14,7 +14,7 @@
   margin-right: 15px;
   margin-bottom: 15px;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
   .dashboard-card > a {
@@ -22,4 +22,3 @@
     top: 0; left: 0;
     height: 100%; width: 100%;
   }
-
