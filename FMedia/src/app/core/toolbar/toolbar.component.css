@@ -2,6 +2,7 @@ mat-toolbar {
   position: fixed;
   top: 0; /* Sets the sticky toolbar to be on top */
   z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+  background-color: #708090 !important;
 }
 
 mat-toolbar > span {
@@ -15,7 +16,12 @@ mat-toolbar > span {
 
 .mat-toolbar-single-row {
   height: 48px;
-  padding-left: 4px;
+}
+
+@media (max-width: 1279px) {
+  .mat-toolbar-single-row {
+    padding-left: 4px;
+  }
 }
 
 @media (min-width: 1280px) {

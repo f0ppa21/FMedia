@@ -1,5 +1,5 @@
 
- @import "~@angular/material/prebuilt-themes/deeppurple-amber.css"; /*deeppurple-amber.css indigo-pink.css pink-bluegrey.css purple-green.css */
+ @import "~@angular/material/prebuilt-themes/indigo-pink.css"; /*deeppurple-amber.css indigo-pink.css pink-bluegrey.css purple-green.css */
 
 body {
   margin: 90px 0 0 0;
@@ -24,7 +24,6 @@ h2.title {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 h3.subtitle {
