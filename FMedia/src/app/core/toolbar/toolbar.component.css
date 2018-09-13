@@ -18,6 +18,16 @@ mat-toolbar > span {
   padding-left: 4px;
 }
 
+@media (min-width: 1280px) {
+  .toolbar-logo-container {
+    margin-left: 12.5%;
+  }
+
+  .toolbar-more {
+    margin-right: 12.5%;
+  }
+}
+
 .toolbar-logo {
   margin-bottom: 0;
   margin-top: 8px;
