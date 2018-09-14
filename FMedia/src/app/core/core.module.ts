@@ -3,11 +3,11 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { EnsureModuleLoadedOnceGuard } from './ensureModuleLoadedOnceGuard';
 
 import { ToolbarModule } from './toolbar/toolbar.module';
-
+import { ModalDialogModule } from './modal-dialog/modal-dialog.module';
 // import { DataService } from './services/data.service';
 
 @NgModule({
-  exports: [ToolbarModule]
+  exports: [ToolbarModule, ModalDialogModule]
   // providers: [DataService] // these should be singleton
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {    // Ensure that CoreModule is only loaded into AppModule

@@ -5,6 +5,14 @@
       <p>
         Filter-textbox, ButtonToggle (Card/Table) + "Lägg till film"-knapp
       </p>
+      <br/>
+      <p>
+        <button mat-raised-button color="accent" (click) = "openConfirm()" >Open Confirm</button>
+      </p>
+      <br/>
+      <p>
+        Confirm result = {{confirmResult | async}}
+      </p>
     </div>
 </div>
 
