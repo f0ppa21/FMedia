@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 export const AboutDialogDefaultConfig = {
-  width: '320px'
+  width: '280px'
 };
 
 @Component({

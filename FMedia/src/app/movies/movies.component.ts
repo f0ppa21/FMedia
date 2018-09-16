@@ -19,7 +19,10 @@ export class MoviesComponent implements OnInit {
     // TODO: Kolla om man kan göra om Promise till Observable? (slipper då async i vyn?! - Kolla Dans kurs-material)
     this.confirmResult = this.modalDialogService.confirm({
       data: { title: 'Ta bort filmen?',
-              message: 'Den kommer inte längre att finnas kvar...' }
+              message: 'Den kommer inte längre att finnas kvar...',
+              okButtonText: 'Japp',
+              cancelButtonText: 'Nä'
+            }
     });
   }
 }
