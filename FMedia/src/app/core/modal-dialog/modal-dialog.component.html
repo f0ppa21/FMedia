@@ -7,7 +7,7 @@
   {{data.message}}
 </div>
 
-<div mat-dialog-actions>
+<div mat-dialog-actions [align]="data.buttonAlign">
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>{{data.okButtonText}}</button>
   <button mat-button [mat-dialog-close]="false" *ngIf="data.isConfirm">{{data.cancelButtonText}}</button>
 </div>

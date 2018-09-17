@@ -9,20 +9,28 @@ import { ModalDialogService } from '../core/modal-dialog/modal-dialog.service';
 })
 export class MoviesComponent implements OnInit {
 
-  confirmResult: Promise<boolean>;
+  confirmResult: boolean;
 
   constructor(private modalDialogService: ModalDialogService) { }
 
   ngOnInit() { }
 
   openConfirm() {
-    // TODO: Kolla om man kan göra om Promise till Observable? (slipper då async i vyn?! - Kolla Dans kurs-material)
-    this.confirmResult = this.modalDialogService.confirm({
+    const self = this;
+    this.modalDialogService.confirm({
+      width: '400px',
       data: { title: 'Ta bort filmen?',
-              message: 'Den kommer inte längre att finnas kvar...',
-              okButtonText: 'Japp',
-              cancelButtonText: 'Nä'
-            }
-    });
+              message: 'Den kommer inte längre att finnas kvar... nä inte alls, den är helt omöjlig att få tillbaka!' }
+    })
+      .then(function(result) {
+        self.confirmResult = result;
+      });
+  }
+
+  openAlert() {
+    this.modalDialogService.alert({ data: { title: 'Filmen är inte längre tillgänglig!' } })
+      .then(function () {
+        alert('Nu är vi tillbaka syncront!');
+      });
   }
 }
