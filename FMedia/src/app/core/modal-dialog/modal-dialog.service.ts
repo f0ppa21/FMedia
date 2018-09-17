@@ -10,7 +10,7 @@ export class ModalDialogService {
 
     alert(config: any): Promise<boolean> {
       config.disableClose = true;
-      config.data.buttonAlign = config.data.buttonAlign ? config.data.buttonAlign : 'center';
+      config.data.buttonAlign = 'center';
       config.data.okButtonText = config.data.okButtonText ? config.data.okButtonText : 'OK';
 
       const dialogRef = this.dialog.open(ModalDialogComponent, config);
@@ -27,7 +27,7 @@ export class ModalDialogService {
     confirm(config: any): Promise<boolean> {
       config.disableClose = true;
       config.data.isConfirm = true;
-      config.data.buttonAlign = config.data.buttonAlign ? config.data.buttonAlign : 'end';
+      config.data.buttonAlign = 'end';
       config.data.okButtonText = config.data.okButtonText ? config.data.okButtonText : 'OK';
       config.data.cancelButtonText = config.data.cancelButtonText ? config.data.cancelButtonText : 'Avbryt';
 
