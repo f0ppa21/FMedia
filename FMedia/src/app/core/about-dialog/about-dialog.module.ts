@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { EnsureModuleLoadedOnceGuard } from '../ensureModuleLoadedOnceGuard';
 
 import { SharedModule } from '../../shared/shared.module';
 import { AboutDialogComponent } from './about-dialog.component';
@@ -8,4 +9,8 @@ import { AboutDialogComponent } from './about-dialog.component';
   entryComponents: [AboutDialogComponent],
   declarations: [AboutDialogComponent]
 })
-export class AboutDialogModule { }
+export class AboutDialogModule extends EnsureModuleLoadedOnceGuard {
+  constructor(@Optional() @SkipSelf() parentModule: AboutDialogModule) {
+    super(parentModule);
+  }
+}
