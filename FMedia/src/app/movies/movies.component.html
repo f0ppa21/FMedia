@@ -5,9 +5,9 @@
       <h2 class="title">Filmer</h2>
     </div>
     <div style="float: right">
-      <mat-button-toggle-group color="primary" name="displayMode" aria-label="displayMode" value="card">
-        <mat-button-toggle value="card"><mat-icon>web_asset</mat-icon> Kort</mat-button-toggle>
-        <mat-button-toggle value="grid"><mat-icon>grid_on</mat-icon> Tabell</mat-button-toggle>
+      <mat-button-toggle-group [value]="displayMode">
+        <mat-button-toggle value="card" (click)="changeDisplayMode(displayModeEnum.Card)"><mat-icon>web_asset</mat-icon> Kort</mat-button-toggle>
+        <mat-button-toggle value="grid" (click)="changeDisplayMode(displayModeEnum.Grid)"><mat-icon>grid_on</mat-icon> Tabell</mat-button-toggle>
       </mat-button-toggle-group>
       <button mat-raised-button><mat-icon>add</mat-icon> Lägg till film</button>
     </div>
@@ -15,9 +15,8 @@
 </div>
 <div class="container" fxLayout="row" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0px" fxLayoutAlign="center">
   <div fxFlex="75%">
-    <mat-form-field>
-      <input matInput placeholder="Sök">
-    </mat-form-field>
+    <app-movies-card [hidden]="displayMode !== displayModeEnum.Card"></app-movies-card>
+    <app-movies-grid [hidden]="displayMode !== displayModeEnum.Grid"></app-movies-grid>
   </div>
 </div>
 

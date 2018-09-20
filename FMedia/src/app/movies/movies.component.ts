@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+enum DisplayModeEnum {
+  Card = 'card',
+  Grid = 'grid'
+}
+
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
@@ -7,11 +12,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesComponent implements OnInit {
 
-  confirmResult: boolean;
+  displayMode: DisplayModeEnum;
+  displayModeEnum = DisplayModeEnum;
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.displayMode = DisplayModeEnum.Card;
+  }
+
+  changeDisplayMode(mode: DisplayModeEnum) {
+    this.displayMode = mode;
+  }
 
   // import { ModalDialogService } from '../core/modal-dialog/modal-dialog.service';
   // constructor(private modalDialogService: ModalDialogService) { }
