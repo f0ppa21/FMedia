@@ -11,7 +11,8 @@ import {
   MatListModule,
   MatChipsModule,
   MatButtonToggleModule,
-  MatInputModule
+  MatInputModule,
+  MatTableModule
 } from '@angular/material';
 
 @NgModule({
@@ -26,7 +27,8 @@ import {
     MatListModule,
     MatChipsModule,
     MatButtonToggleModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
   ]
 })
 export class MaterialModule { }
