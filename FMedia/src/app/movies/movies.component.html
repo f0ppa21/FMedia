@@ -5,11 +5,13 @@
       <h2 class="title">Filmer</h2>
     </div>
     <div style="float: right">
+      <button mat-raised-button><mat-icon>add</mat-icon> Lägg till film</button>
+    </div>
+    <div style="float: right">
       <mat-button-toggle-group [value]="displayMode">
         <mat-button-toggle class="displayModeBtn" value="card" (click)="changeDisplayMode(displayModeEnum.Card)"><mat-icon>web_asset</mat-icon> Kort</mat-button-toggle>
         <mat-button-toggle class="displayModeBtn" value="grid" (click)="changeDisplayMode(displayModeEnum.Grid)"><mat-icon>grid_on</mat-icon> Tabell</mat-button-toggle>
       </mat-button-toggle-group>
-      <button mat-raised-button><mat-icon>add</mat-icon> Lägg till film</button>
     </div>
   </div>
 </div>
