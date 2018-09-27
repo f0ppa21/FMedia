@@ -9,6 +9,8 @@
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 30px;
+   max-width: 395px;  /* TODO: Sätt ingen max-width/inherit på sm-storlek (styr med css media query) - Gör samma för Dashboard?!  */
+  float: left;
 }
 
 .example-header-image {
