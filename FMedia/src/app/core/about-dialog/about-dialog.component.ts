@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Overlay} from '@angular/cdk/overlay';
 
-export const AboutDialogDefaultConfig = {
-  width: '280px'
+export let AboutDialogDefaultConfig = {
+  width: '280px',
+  scrollStrategy: null
 };
 
 @Component({
@@ -10,7 +12,7 @@ export const AboutDialogDefaultConfig = {
 })
 export class AboutDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(overlay: Overlay) { AboutDialogDefaultConfig.scrollStrategy = overlay.scrollStrategies.noop(); }
 
   ngOnInit() { }
 }
