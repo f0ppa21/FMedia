@@ -3,6 +3,7 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
 const routes: Routes = [
   { path: 'movies', loadChildren: './movies/movies.module#MoviesModule' },
+  { path: 'movie/:id', loadChildren: './movie/movie.module#MovieModule' },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '**', pathMatch: 'full', redirectTo: '/dashboard' } // Catch any unfound routes and redirect to home page
 ];

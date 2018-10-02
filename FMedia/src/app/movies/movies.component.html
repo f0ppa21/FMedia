@@ -5,7 +5,7 @@
       <h2 class="title">Filmer</h2>
     </div>
     <div style="float: right">
-      <button mat-raised-button><mat-icon>add</mat-icon> <span fxShow="false" fxShow.gt-xs>Lägg till film</span></button>
+      <button mat-raised-button [routerLink]="['/movie',0,'edit']"><mat-icon>add</mat-icon> <span fxShow="false" fxShow.gt-xs>Lägg till film</span></button>
     </div>
     <div style="float: right">
       <mat-button-toggle-group [value]="displayMode">
