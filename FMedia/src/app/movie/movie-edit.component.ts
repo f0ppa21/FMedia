@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { HostBinding } from '@angular/core';
+import { slideInDownAnimation } from '../shared/router.animations';
 
 import { ModalDialogService } from '../core/modal-dialog/modal-dialog.service';
 
 @Component({
   selector: 'app-movie-edit',
   templateUrl: './movie-edit.component.html',
-  styleUrls: ['./movie-edit.component.css']
+  styleUrls: ['./movie-edit.component.css'],
+  animations: [ slideInDownAnimation ]
 })
 export class MovieEditComponent implements OnInit {
+  @HostBinding('@routeAnimation') routeAnimation = true;
+  @HostBinding('style.display')   display = 'block';
+
   id: number;
   title: string; // TODO: Ändra sedan så att titeln live visar det man skriver i titel-textboxen + om den är tom visas title (ng if)
 

@@ -3,6 +3,8 @@ import { trigger, state, animate, style, transition } from '@angular/animations'
 Config i den component.ts som ska animeras vid routing:
 import { HostBinding } from '@angular/core';
 import { slideInDownAnimation } from '../shared/router.animations';
+Lägg till i Component
+animations: [ slideInDownAnimation ]
 Direkt under "export class":
 @HostBinding('@routeAnimation') routeAnimation = true;
 @HostBinding('style.display')   display = 'block';
