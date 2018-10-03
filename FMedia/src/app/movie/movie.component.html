@@ -1,7 +1,12 @@
 
-<!-- // TODO: Gör en Layout med class=container runt allt här + lägg allt i ett tomt Material-card så får edit/detail sätta sin resp. content i den -->
-<router-outlet></router-outlet>
-<hr>
-<p>
-  <a routerLink="/movies">Visa alla filmer</a>
-</p>
+<div class="container" fxLayout="row" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0px" fxLayoutAlign="center">
+  <div fxFlex="75%">
+    <mat-card>
+      <router-outlet></router-outlet>
+
+      <mat-divider></mat-divider>
+
+      <button mat-button routerLink="/movies"><mat-icon>navigate_before</mat-icon> Visa alla filmer</button>
+    </mat-card>
+  </div>
+</div>
