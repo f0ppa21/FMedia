@@ -9,8 +9,32 @@
   }
 
   .dashboard-card {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
+    max-width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .dashboard-card {
+     max-width: 230px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .dashboard-card {
+     max-width: 315px !important;
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1279px) {
+  .dashboard-card {
+     max-width: 275px !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1890px) {
+  .dashboard-card {
+     max-width: 250px !important;
   }
 }
 
@@ -20,13 +44,15 @@
 }
 
 .dashboard-card {
-  margin-top: 0px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
   padding-top: 15px;
   padding-bottom: 10px;
   padding-left: 8px;
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  max-width: 220px;
+  float: left;
 }
 
   .dashboard-card > a {

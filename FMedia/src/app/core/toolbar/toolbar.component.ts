@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import {Overlay} from '@angular/cdk/overlay';
 
 import { AboutDialogComponent, AboutDialogDefaultConfig } from '../about-dialog/about-dialog.component';
 
@@ -10,7 +11,9 @@ import { AboutDialogComponent, AboutDialogDefaultConfig } from '../about-dialog/
 })
 export class ToolbarComponent {
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, overlay: Overlay) {
+    AboutDialogDefaultConfig.scrollStrategy = overlay.scrollStrategies.noop();
+  }
 
   openAboutDialog() {
     this.dialog.open(AboutDialogComponent, AboutDialogDefaultConfig);

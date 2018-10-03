@@ -24,25 +24,4 @@ export class MoviesComponent implements OnInit {
   changeDisplayMode(mode: DisplayModeEnum) {
     this.displayMode = mode;
   }
-
-  // import { ModalDialogService } from '../core/modal-dialog/modal-dialog.service';
-  // constructor(private modalDialogService: ModalDialogService) { }
-  // openConfirm() {
-  //   const self = this;
-  //   this.modalDialogService.confirm({
-  //     width: '400px',
-  //     data: { title: 'Ta bort filmen?',
-  //             message: 'Den kommer inte längre att finnas kvar... nä inte alls, den är helt omöjlig att få tillbaka!' }
-  //   })
-  //     .then(function(result) {
-  //       self.confirmResult = result;
-  //     });
-  // }
-
-  // openAlert() {
-  //   this.modalDialogService.alert({ data: { title: 'Filmen är inte längre tillgänglig!' } })
-  //     .then(function () {
-  //       alert('Nu är vi tillbaka syncront!');
-  //     });
-  // }
 }
