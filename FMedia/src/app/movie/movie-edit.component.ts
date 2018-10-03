@@ -18,13 +18,10 @@ export class MovieEditComponent implements OnInit {
 
   ngOnInit() {
     this.route.parent.params.subscribe((params: Params) => {
-      this.id = +params['id'];  // TODO: this.movieService.getMovie(+params['id']).subscribe((movie: IMovie) => { this.movie = movie; });
+      this.id = +params['id'];  // TODO: this.movieService.getMovie(this.id).subscribe((movie: IMovie) => { this.movie = movie; });
       this.title = (this.id === 0 ? 'Lägg till film' : 'Redigera film');
     });
   }
-
-  // TODO: Testa om vi måste sätta scrollStrategy som för About för att undvika "hoppig" sida. Sätt helst i ModalDialogService...
-  // TODO: Testa även på movies-sidan att öppna en Alert där... ska inte hoppa..
 
   openConfirm() {
     const self = this;

@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { Overlay } from '@angular/cdk/overlay';
 
 import { ModalDialogComponent } from './modal-dialog.component';
 
 @Injectable()
 export class ModalDialogService {
 
-    constructor(public dialog: MatDialog) { }
+    constructor(private dialog: MatDialog, private overlay: Overlay) { }
 
     alert(config: any): Promise<boolean> {
+      config.scrollStrategy = this.overlay.scrollStrategies.noop();
       config.disableClose = true;
       config.data.buttonAlign = 'center';
       config.data.okButtonText = config.data.okButtonText ? config.data.okButtonText : 'OK';
@@ -25,6 +27,7 @@ export class ModalDialogService {
     }
 
     confirm(config: any): Promise<boolean> {
+      config.scrollStrategy = this.overlay.scrollStrategies.noop();
       config.disableClose = true;
       config.data.isConfirm = true;
       config.data.buttonAlign = 'end';
