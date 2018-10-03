@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { ModalDialogService } from '../core/modal-dialog/modal-dialog.service';
 
@@ -12,8 +13,9 @@ export class MovieEditComponent implements OnInit {
   id: number;
   title: string; // TODO: Ändra sedan så att titeln live visar det man skriver i titel-textboxen + om den är tom visas title (ng if)
 
-  constructor(
+  constructor(private router: Router,
     private route: ActivatedRoute,
+    private location: Location,
     private modalDialogService: ModalDialogService) { }
 
   ngOnInit() {
@@ -21,6 +23,11 @@ export class MovieEditComponent implements OnInit {
       this.id = +params['id'];  // TODO: this.movieService.getMovie(this.id).subscribe((movie: IMovie) => { this.movie = movie; });
       this.title = (this.id === 0 ? 'Lägg till film' : 'Redigera film');
     });
+  }
+
+  cancel(event: Event) {
+    event.preventDefault();
+    this.location.back();
   }
 
   openConfirm() {
@@ -36,9 +43,6 @@ export class MovieEditComponent implements OnInit {
   }
 
   openAlert() {
-    this.modalDialogService.alert({ data: { title: 'Filmen är inte längre tillgänglig!' } })
-      .then(function () {
-        alert('Nu är vi tillbaka syncront!');
-      });
+    this.modalDialogService.alert({ data: { title: 'Implementation saknas!' } });
   }
 }

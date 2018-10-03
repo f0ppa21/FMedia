@@ -1,9 +1,19 @@
 
-<h2 class="title">{{title}}</h2>
+<div class="container" fxLayout="row" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0px" fxLayoutAlign="center">
+  <div fxFlex="75%">
+    <mat-card>
+      <h2 class="title">{{title}}</h2>
 
-<p>
-  movie-edit works! --> id: {{id}}
-  <br/>
-  <br/>
-  <button mat-button (click)="openAlert()">Show alert!</button>
-</p>
+      <p>
+        Edit works! --> id: {{id}}
+        <br/>
+      </p>
+
+      <mat-divider></mat-divider>
+
+      <a mat-button routerLink="/movies" class="footer-back-link"><mat-icon>navigate_before</mat-icon> Visa alla filmer</a>
+      <button mat-raised-button (click)="cancel($event)" class="footer-action">Avbryt</button>
+      <button mat-raised-button color="primary" (click)="openAlert()" class="footer-action">Spara</button>
+    </mat-card>
+  </div>
+</div>

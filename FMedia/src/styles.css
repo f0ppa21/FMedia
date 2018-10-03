@@ -48,3 +48,15 @@ h3.subtitle {
 span.mat-button-wrapper > mat-icon.mat-icon {
   margin-right: 4px;
 }
+
+.mat-button.footer-back-link {
+  padding-left: 0;
+  padding-right: 8px;
+  margin-top: 25px;
+}
+
+.mat-raised-button.footer-action {
+  float: right;
+  margin-top: 25px;
+  margin-left: 10px;
+}
