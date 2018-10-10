@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-enum DisplayModeEnum {
-  Card = 'card',
-  Grid = 'grid'
-}
+import { DisplayModeMasterEnum } from '../shared/enums';
+import { StateService } from '../core/services/state.service';
 
 @Component({
   selector: 'app-movies',
@@ -12,16 +10,17 @@ enum DisplayModeEnum {
 })
 export class MoviesComponent implements OnInit {
 
-  displayMode: DisplayModeEnum;
-  displayModeEnum = DisplayModeEnum;
+  displayMode: DisplayModeMasterEnum;
+  displayModeEnum = DisplayModeMasterEnum;
 
-  constructor() { }
+  constructor(private stateService: StateService) { }
 
   ngOnInit() {
-    this.displayMode = DisplayModeEnum.Card;
+    this.displayMode = this.stateService.displayModeMovies;
   }
 
-  changeDisplayMode(mode: DisplayModeEnum) {
+  changeDisplayMode(mode: DisplayModeMasterEnum) {
     this.displayMode = mode;
+    this.stateService.displayModeMovies = mode;
   }
 }

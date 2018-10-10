@@ -1,5 +1,13 @@
-<p>
-  movie-details works! --> id: {{id}} <br/>
-  <!-- // TODO: Visa en edit-penna-ikon-raised-knapp till höger i footer -->
-  <a [routerLink]="['/movie',id,'edit']">Edit</a>
-</p>
+
+<div class="container" fxLayout="row" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0px" fxLayoutAlign="center">
+    <div fxFlex="75%">
+      <mat-card>
+        <h2 class="title">{{title}}</h2>
+
+        <mat-divider></mat-divider>
+
+        <a mat-button routerLink="/movies" class="footer-back-link"><mat-icon>navigate_before</mat-icon> <span fxShow="false" fxShow.gt-xs>Visa alla filmer</span></a>
+        <button mat-raised-button [routerLink]="['/movie',id,'edit']" class="footer-action"><mat-icon>edit</mat-icon> Redigera</button>
+      </mat-card>
+    </div>
+  </div>

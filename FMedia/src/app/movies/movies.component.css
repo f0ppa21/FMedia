@@ -9,4 +9,15 @@ mat-form-field {
 
 .displayModeBtn {
   font-size: 14px;
+  font-weight: 500;
+}
+
+.displayModeBtn .mat-icon {
+  margin-right: 5px;
+}
+
+@media (max-width: 599px) {
+  .displayModeBtn .mat-icon {
+    margin-right: inherit;
+  }
 }
