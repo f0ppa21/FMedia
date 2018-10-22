@@ -19,6 +19,7 @@ body {
 }
 
 h2.title {
+  font-size: 22px;
   font-weight: 400;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -26,8 +27,8 @@ h2.title {
 }
 
 h3.subtitle {
-  font-weight: 300;
   font-size: 20px;
+  font-weight: 300;
   line-height: 32px;
   margin-top: 20px;
   margin-right: 0px;
@@ -39,8 +40,13 @@ h3.subtitle {
   border-bottom-color: rgba(0, 0, 0, 0.12);
 }
 
+.mat-card-title {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
 .mat-card-subtitle {
-  font-size: 13px;
+  font-size: 13px !important;
 }
 
 span.mat-button-wrapper > mat-icon.mat-icon {
