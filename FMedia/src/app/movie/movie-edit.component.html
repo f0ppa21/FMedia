@@ -14,7 +14,7 @@
       <mat-divider></mat-divider>
 
       <a mat-button routerLink="/movies" class="footer-back-link"><mat-icon>navigate_before</mat-icon> <span fxShow="false" fxShow.gt-xs>Visa alla filmer</span></a>
-      <button mat-raised-button (click)="cancel($event)" class="footer-action">Avbryt</button>
+      <button mat-stroked-button (click)="cancel($event)" class="footer-action">Avbryt</button>
       <button mat-raised-button color="primary" (click)="openAlert()" class="footer-action">Spara</button>
     </mat-card>
   </div>

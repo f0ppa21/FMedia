@@ -8,7 +8,7 @@
       <button mat-raised-button [routerLink]="['/movie',0,'edit']"><mat-icon>add</mat-icon> <span fxShow="false" fxShow.gt-xs>Lägg till film</span></button>
     </div>
     <div style="float: right">
-      <mat-button-toggle-group [value]="displayMode">
+      <mat-button-toggle-group appearance="legacy" [value]="displayMode">
         <mat-button-toggle class="displayModeBtn" value="card" (click)="changeDisplayMode(displayModeEnum.Card)"><mat-icon>web_asset</mat-icon> <span fxShow="false" fxShow.gt-xs>Kort</span></mat-button-toggle>
         <mat-button-toggle class="displayModeBtn" value="grid" (click)="changeDisplayMode(displayModeEnum.Grid)"><mat-icon>grid_on</mat-icon> <span fxShow="false" fxShow.gt-xs>Tabell</span></mat-button-toggle>
       </mat-button-toggle-group>

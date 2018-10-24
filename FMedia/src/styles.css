@@ -59,7 +59,7 @@ span.mat-button-wrapper > mat-icon.mat-icon {
   margin-top: 25px;
 }
 
-.mat-raised-button.footer-action {
+.mat-raised-button.footer-action, .mat-stroked-button.footer-action {
   float: right;
   margin-top: 25px;
   margin-left: 10px;
