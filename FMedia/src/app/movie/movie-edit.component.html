@@ -4,18 +4,32 @@
     <mat-card>
       <h2 class="title">{{title}}</h2>
 
-      <p>
-        <br/>
-        Gudfadern {{id}}
-        <br/>
-        <br/>
-      </p>
+      <div> <!--  // TODO: Gör om denna till en form -->
+        <div class="form-content">
+          <mat-form-field>
+            <input matInput placeholder="Input">
+          </mat-form-field>
 
-      <mat-divider></mat-divider>
+          <mat-form-field>
+            <textarea matInput placeholder="Textarea"></textarea>
+          </mat-form-field>
+        </div>
 
-      <a mat-button routerLink="/movies" class="footer-back-link"><mat-icon>navigate_before</mat-icon> <span fxShow="false" fxShow.gt-xs>Visa alla filmer</span></a>
-      <button mat-stroked-button (click)="cancel($event)" class="footer-action">Avbryt</button>
-      <button mat-raised-button color="primary" (click)="openAlert()" class="footer-action">Spara</button>
+        <!-- <mat-form-field>
+          <mat-select placeholder="Select">
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+        </mat-form-field> -->
+
+
+        <div>
+          <mat-divider></mat-divider>
+          <a mat-button routerLink="/movies" class="footer-back-link"><mat-icon>navigate_before</mat-icon> <span fxShow="false" fxShow.gt-xs>Visa alla filmer</span></a>
+          <button mat-stroked-button (click)="cancel($event)" class="footer-action">Avbryt</button>
+          <button mat-raised-button color="primary" (click)="openAlert()" class="footer-action">Spara</button>
+        </div>
+
+      </div>
     </mat-card>
   </div>
 </div>
