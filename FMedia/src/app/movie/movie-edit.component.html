@@ -4,15 +4,22 @@
     <mat-card>
       <h2 class="title">{{title}}</h2>
 
-      <div> <!--  // TODO: Gör om denna till en form -->
+      <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
         <div class="form-content">
           <mat-form-field>
-            <input matInput placeholder="Input">
+            <input matInput placeholder="Titel" formControlName="title" required>
+            <mat-error [hidden]="customerForm.controls['title'].valid">Ange en titel för filmen</mat-error>
           </mat-form-field>
-
-          <mat-form-field>
-            <textarea matInput placeholder="Textarea"></textarea>
-          </mat-form-field>
+          <br />
+          <br />
+          {{ message }}
+          <br />
+          <br />
+          Valid: {{ customerForm.valid}}
+          <br />
+          Pristine: {{ customerForm.pristine }}
+          <br />
+          Touched: {{ customerForm.touched }}
         </div>
 
         <!-- <mat-form-field>
@@ -26,10 +33,10 @@
           <mat-divider></mat-divider>
           <a mat-button routerLink="/movies" class="footer-back-link"><mat-icon>navigate_before</mat-icon> <span fxShow="false" fxShow.gt-xs>Visa alla filmer</span></a>
           <button mat-stroked-button (click)="cancel($event)" class="footer-action">Avbryt</button>
-          <button mat-raised-button color="primary" (click)="openAlert()" class="footer-action">Spara</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!customerForm.valid" class="footer-action">Spara</button>
         </div>
 
-      </div>
+      </form>
     </mat-card>
   </div>
 </div>
